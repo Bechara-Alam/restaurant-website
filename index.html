@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Savory is a modern restaurant offering fresh meals, delicious desserts, and a welcoming dining experience.">
+
+    <title>Savory Restaurant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">Savory<span>.</span></div>
+            <div class="loader-spinner"></div>
+            <p>Preparing something delicious...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                Savory<span>.</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#chefs" class="nav-link">Chefs</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode">
+                    <span id="themeIcon">☀️</span>
+                </button>
+
+                <a href="#reservation" class="nav-button">
+                    Book a Table
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content container">
+
+                <p class="section-label">Welcome to Savory</p>
+
+                <h1>
+                    Delicious food made with
+                    <span>love and passion.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Enjoy fresh ingredients, unforgettable flavors, and a warm dining experience in the heart of the city.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="primary-button">Explore Menu</a>
+                    <a href="#reservation" class="secondary-button">Reserve a Table</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About -->
+        <section class="about section" id="about">
+
+            <div class="container about-container">
+
+                <div class="about-content reveal">
+
+                    <p class="section-label">About Us</p>
+
+                    <h2>A place where every meal becomes a memory</h2>
+
+                    <p>
+                        At Savory, we combine traditional cooking techniques with modern creativity. Every dish is prepared using carefully selected ingredients and served with genuine hospitality.
+                    </p>
+
+                    <p>
+                        Whether you are joining us for lunch, dinner, or a special celebration, our team is committed to making your experience exceptional.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div class="feature">
+                            <span>✓</span>
+                            <div>
+                                <h3>Fresh Ingredients</h3>
+                                <p>Quality ingredients selected every day.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <span>✓</span>
+                            <div>
+                                <h3>Expert Chefs</h3>
+                                <p>Meals created by experienced professionals.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <span>✓</span>
+                            <div>
+                                <h3>Warm Atmosphere</h3>
+                                <p>A comfortable place for every occasion.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#menu" class="primary-button">Discover Our Menu</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="container stats-grid">
+
+                <article class="stat-card reveal">
+                    <strong class="counter" data-target="12">0</strong>
+                    <span>Years of Experience</span>
+                </article>
+
+                <article class="stat-card reveal">
+                    <strong class="counter" data-target="45">0</strong>
+                    <span>Menu Items</span>
+                </article>
+
+                <article class="stat-card reveal">
+                    <strong class="counter" data-target="8">0</strong>
+                    <span>Professional Chefs</span>
+                </article>
+
+                <article class="stat-card reveal">
+                    <strong class="counter" data-target="5000">0</strong>
+                    <span>Happy Guests</span>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Menu -->
+        <section class="menu-section section" id="menu">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-label">Our Menu</p>
+                    <h2>Popular dishes</h2>
+                    <p>
+                        Discover some of our guests' favorite meals, prepared with fresh ingredients and unforgettable flavors.
+                    </p>
+                </div>
+
+                <div class="menu-filters reveal">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="main">Main Dishes</button>
+                    <button class="filter-button" data-filter="pizza">Pizza</button>
+                    <button class="filter-button" data-filter="salad">Salads</button>
+                    <button class="filter-button" data-filter="dessert">Desserts</button>
+                </div>
+
+                <div class="menu-grid">
+
+                    <article class="menu-card reveal" data-category="main">
+                        <div class="menu-image">
+                            <img src="images/grilled-steak.jpg" alt="Grilled steak with vegetables">
+                            <span class="menu-badge">Popular</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title-row">
+                                <h3>Grilled Steak</h3>
+                                <span class="price">$24</span>
+                            </div>
+                            <p>Tender grilled beef served with vegetables and our signature sauce.</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card reveal" data-category="main">
+                        <div class="menu-image">
+                            <img src="images/creamy-pasta.jpg" alt="Creamy pasta with herbs">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title-row">
+                                <h3>Creamy Pasta</h3>
+                                <span class="price">$16</span>
+                            </div>
+                            <p>Fresh pasta served in a creamy sauce with herbs and parmesan cheese.</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card reveal" data-category="main">
+                        <div class="menu-image">
+                            <img src="images/classic-burger.jpg" alt="Classic burger with fries">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title-row">
+                                <h3>Classic Burger</h3>
+                                <span class="price">$14</span>
+                            </div>
+                            <p>Juicy beef burger with cheese, fresh vegetables, and crispy fries.</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card reveal" data-category="pizza">
+                        <div class="menu-image">
+                            <img src="images/margherita-pizza.jpg" alt="Margherita pizza">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title-row">
+                                <h3>Margherita Pizza</h3>
+                                <span class="price">$15</span>
+                            </div>
+                            <p>Stone-baked pizza with tomato sauce, mozzarella, and fresh basil.</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card reveal" data-category="salad">
+                        <div class="menu-image">
+                            <img src="images/chicken-salad.jpg" alt="Fresh grilled chicken salad">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title-row">
+                                <h3>Chicken Salad</h3>
+                                <span class="price">$13</span>
+                            </div>
+                            <p>Grilled chicken with lettuce, tomatoes, avocado, and house dressing.</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card reveal" data-category="dessert">
+                        <div class="menu-image">
+                            <img src="images/chocolate-dessert.jpg" alt="Chocolate dessert with berries">
+                            <span class="menu-badge">Chef's Choice</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title-row">
+                                <h3>Chocolate Delight</h3>
+                                <span class="price">$9</span>
+                            </div>
+                            <p>Rich chocolate dessert served with fresh berries and vanilla cream.</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Chefs -->
+        <section class="chefs section" id="chefs">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-label">Our Team</p>
+                    <h2>Meet our chefs</h2>
+                    <p>
+                        Our talented chefs bring creativity, experience, and passion to every plate.
+                    </p>
+                </div>
+
+                <div class="chef-grid">
+
+                    <article class="chef-card reveal">
+                        <img src="images/chef-1.jpg" alt="Head Chef Daniel Martin">
+                        <div class="chef-info">
+                            <h3>Daniel Martin</h3>
+                            <p>Head Chef</p>
+                        </div>
+                    </article>
+
+                    <article class="chef-card reveal">
+                        <img src="images/chef-2.jpg" alt="Pastry Chef Sophia Lewis">
+                        <div class="chef-info">
+                            <h3>Sophia Lewis</h3>
+                            <p>Pastry Chef</p>
+                        </div>
+                    </article>
+
+                    <article class="chef-card reveal">
+                        <img src="images/chef-3.jpg" alt="Sous Chef Michael Brown">
+                        <div class="chef-info">
+                            <h3>Michael Brown</h3>
+                            <p>Sous Chef</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews section" id="reviews">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-label">Testimonials</p>
+                    <h2>What our guests say</h2>
+                </div>
+
+                <div class="review-grid">
+
+                    <article class="review-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            “The food was delicious, the service was excellent, and the atmosphere was perfect. I will definitely return.”
+                        </p>
+                        <div class="reviewer">
+                            <img src="images/customer-1.jpg" alt="Customer Emma Wilson">
+                            <div>
+                                <h3>Emma Wilson</h3>
+                                <span>Regular Guest</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            “One of the best restaurant experiences I have had. The steak was cooked perfectly and the staff were friendly.”
+                        </p>
+                        <div class="reviewer">
+                            <img src="images/customer-2.jpg" alt="Customer James Miller">
+                            <div>
+                                <h3>James Miller</h3>
+                                <span>Food Lover</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>
+                            “A beautiful restaurant with amazing desserts. It is the perfect place for dinner with family and friends.”
+                        </p>
+                        <div class="reviewer">
+                            <img src="images/customer-3.jpg" alt="Customer Olivia Clark">
+                            <div>
+                                <h3>Olivia Clark</h3>
+                                <span>Local Customer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Reservation -->
+        <section class="reservation section" id="reservation">
+
+            <div class="container reservation-container">
+
+                <div class="reservation-content reveal">
+
+                    <p class="section-label">Reservation</p>
+                    <h2>Reserve your table</h2>
+
+                    <p>
+                        Plan your next meal with us. Complete the form and our team will confirm your reservation.
+                    </p>
+
+                    <div class="restaurant-details">
+
+                        <p>
+                            <strong>Opening Hours</strong><br> Monday–Sunday: 11:00 AM–11:00 PM
+                        </p>
+
+                        <p>
+                            <strong>Phone</strong><br> +961 70 123 456
+                        </p>
+
+                        <p>
+                            <strong>Location</strong><br> Beirut, Lebanon
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <form class="reservation-form reveal" id="reservationForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+
+                            <select id="guests" name="guests" required>
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6+ Guests</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="date">Reservation Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Reservation Time</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Special Request</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about any special request"></textarea>
+                    </div>
+
+                    <button type="submit" class="primary-button form-button">
+                        Confirm Reservation
+                    </button>
+
+                    <p class="form-message" id="formMessage" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-label">Contact Us</p>
+                    <h2>Visit Savory Restaurant</h2>
+                    <p>We look forward to welcoming you for an unforgettable meal.</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <article class="contact-card reveal">
+                        <span class="contact-icon">📍</span>
+                        <h3>Our Location</h3>
+                        <p>Beirut, Lebanon</p>
+                    </article>
+
+                    <article class="contact-card reveal">
+                        <span class="contact-icon">📞</span>
+                        <h3>Call Us</h3>
+                        <p>+961 70 123 456</p>
+                    </article>
+
+                    <article class="contact-card reveal">
+                        <span class="contact-icon">✉️</span>
+                        <h3>Email Us</h3>
+                        <p>hello@savoryrestaurant.com</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-about">
+                <a href="#home" class="logo">Savory<span>.</span></a>
+                <p>
+                    Fresh flavors, quality ingredients, and memorable dining experiences.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#reservation">Reservation</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Opening Hours</h3>
+                <p>Monday–Friday</p>
+                <span>11:00 AM–11:00 PM</span>
+                <p>Saturday–Sunday</p>
+                <span>10:00 AM–12:00 AM</span>
+            </div>
+
+            <div class="footer-links">
+                <h3>Follow Us</h3>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="TikTok">TikTok</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> Savory Restaurant. Designed by Bechara Alam.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
